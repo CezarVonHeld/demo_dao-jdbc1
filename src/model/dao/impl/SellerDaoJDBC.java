@@ -105,7 +105,7 @@ public class SellerDaoJDBC implements SellerDao {
 			}
 		}
 		catch(SQLException e) {
-			throw new DbException("Error" + e.getMessage());
+			throw new DbException(e.getMessage());
 		}
 		finally {
 			DB.closeStatement(st);
